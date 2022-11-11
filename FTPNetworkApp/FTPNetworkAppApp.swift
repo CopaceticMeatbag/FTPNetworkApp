@@ -10,7 +10,6 @@ import SwiftUI
 @main
 struct FTPNetworkAppApp: App {
     let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -18,3 +17,6 @@ struct FTPNetworkAppApp: App {
         }
     }
 }
+
+
+

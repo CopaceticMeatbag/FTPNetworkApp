@@ -16,6 +16,8 @@
 		D1AA3A7028FE5D150075E573 /* FTPNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AA3A6F28FE5D150075E573 /* FTPNetworkAppTests.swift */; };
 		D1AA3A7A28FE5D150075E573 /* FTPNetworkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AA3A7928FE5D150075E573 /* FTPNetworkAppUITests.swift */; };
 		D1AA3A7C28FE5D150075E573 /* FTPNetworkAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AA3A7B28FE5D150075E573 /* FTPNetworkAppUITestsLaunchTests.swift */; };
+		D1AA3A8928FE5D2F0075E573 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AA3A8828FE5D2F0075E573 /* Server.swift */; };
+		D1AA3A8B28FE5FF20075E573 /* ServerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AA3A8A28FE5FF20075E573 /* ServerConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D136A0A9291E48FB00822A7B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D1199CB0290F8DF60030C251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D1AA3A5628FE5D0F0075E573 /* FTPNetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTPNetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AA3A5928FE5D0F0075E573 /* FTPNetworkAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPNetworkAppApp.swift; sourceTree = "<group>"; };
 		D1AA3A5B28FE5D0F0075E573 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +64,8 @@
 		D1AA3A7528FE5D150075E573 /* FTPNetworkAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTPNetworkAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AA3A7928FE5D150075E573 /* FTPNetworkAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPNetworkAppUITests.swift; sourceTree = "<group>"; };
 		D1AA3A7B28FE5D150075E573 /* FTPNetworkAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPNetworkAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1AA3A8828FE5D2F0075E573 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		D1AA3A8A28FE5FF20075E573 /* ServerConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +100,7 @@
 				D1AA3A6E28FE5D150075E573 /* FTPNetworkAppTests */,
 				D1AA3A7828FE5D150075E573 /* FTPNetworkAppUITests */,
 				D1AA3A5728FE5D0F0075E573 /* Products */,
+				DDF2E47D10F955E077E90339 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,12 +117,15 @@
 		D1AA3A5828FE5D0F0075E573 /* FTPNetworkApp */ = {
 			isa = PBXGroup;
 			children = (
+				D1199CB0290F8DF60030C251 /* Info.plist */,
 				D1AA3A5928FE5D0F0075E573 /* FTPNetworkAppApp.swift */,
 				D1AA3A5B28FE5D0F0075E573 /* ContentView.swift */,
 				D1AA3A5D28FE5D150075E573 /* Assets.xcassets */,
 				D1AA3A6228FE5D150075E573 /* Persistence.swift */,
 				D1AA3A6428FE5D150075E573 /* FTPNetworkApp.xcdatamodeld */,
 				D1AA3A5F28FE5D150075E573 /* Preview Content */,
+				D1AA3A8828FE5D2F0075E573 /* Server.swift */,
+				D1AA3A8A28FE5FF20075E573 /* ServerConnection.swift */,
 			);
 			path = FTPNetworkApp;
 			sourceTree = "<group>";
@@ -133,6 +155,13 @@
 			path = FTPNetworkAppUITests;
 			sourceTree = "<group>";
 		};
+		DDF2E47D10F955E077E90339 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +172,7 @@
 				D1AA3A5228FE5D0F0075E573 /* Sources */,
 				D1AA3A5328FE5D0F0075E573 /* Frameworks */,
 				D1AA3A5428FE5D0F0075E573 /* Resources */,
+				D136A0A9291E48FB00822A7B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,6 +187,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1AA3A8228FE5D150075E573 /* Build configuration list for PBXNativeTarget "FTPNetworkAppTests" */;
 			buildPhases = (
+				B34F62DBACF00499F5FF50FD /* [CP] Check Pods Manifest.lock */,
 				D1AA3A6728FE5D150075E573 /* Sources */,
 				D1AA3A6828FE5D150075E573 /* Frameworks */,
 				D1AA3A6928FE5D150075E573 /* Resources */,
@@ -175,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1AA3A8528FE5D150075E573 /* Build configuration list for PBXNativeTarget "FTPNetworkAppUITests" */;
 			buildPhases = (
+				B57181F212544A1F74D38448 /* [CP] Check Pods Manifest.lock */,
 				D1AA3A7128FE5D150075E573 /* Sources */,
 				D1AA3A7228FE5D150075E573 /* Frameworks */,
 				D1AA3A7328FE5D150075E573 /* Resources */,
+				E527F858B68929DBF543BB02 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,14 +291,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B34F62DBACF00499F5FF50FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FTPNetworkAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B57181F212544A1F74D38448 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FTPNetworkApp-FTPNetworkAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E527F858B68929DBF543BB02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FTPNetworkApp-FTPNetworkAppUITests/Pods-FTPNetworkApp-FTPNetworkAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FTPNetworkApp-FTPNetworkAppUITests/Pods-FTPNetworkApp-FTPNetworkAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FTPNetworkApp-FTPNetworkAppUITests/Pods-FTPNetworkApp-FTPNetworkAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D1AA3A5228FE5D0F0075E573 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1AA3A8928FE5D2F0075E573 /* Server.swift in Sources */,
 				D1AA3A6328FE5D150075E573 /* Persistence.swift in Sources */,
 				D1AA3A5C28FE5D0F0075E573 /* ContentView.swift in Sources */,
 				D1AA3A5A28FE5D0F0075E573 /* FTPNetworkAppApp.swift in Sources */,
+				D1AA3A8B28FE5FF20075E573 /* ServerConnection.swift in Sources */,
 				D1AA3A6628FE5D150075E573 /* FTPNetworkApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,11 +521,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FTPNetworkApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FTPNetworkApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,11 +551,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FTPNetworkApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FTPNetworkApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

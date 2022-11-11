@@ -10,7 +10,6 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
@@ -39,7 +38,17 @@ struct ContentView: View {
                 }
             }
             Text("Select an item")
+            let _ = self.initServer(port: 21)
         }
+    }
+    
+    func initServer(port: UInt16) {
+        let server = Server(port: port)
+        try! server.start()
+    }
+    
+    func ftpCMDs(server: Server,message: String){
+        
     }
 
     private func addItem() {
